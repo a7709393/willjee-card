@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>和穎國際 Willjee 電子名片 · 分享</title>
+<style>
+  body { margin:0; font-family:-apple-system,"Segoe UI","Microsoft JhengHei",sans-serif; background:#F2F6F8; color:#1A2B33; display:flex; align-items:center; justify-content:center; min-height:100vh; }
+  .box { text-align:center; padding:32px 24px; }
+  .logo { color:#29A8E0; font-size:34px; font-weight:700; font-style:italic; }
+  .sub { color:#7A8A93; font-size:14px; margin:6px 0 28px; }
+  .msg { font-size:15px; color:#33444D; margin-bottom:22px; min-height:22px; }
+  button { background:#29A8E0; color:#fff; border:0; border-radius:10px; padding:14px 30px; font-size:16px; font-weight:500; cursor:pointer; }
+  button:disabled { background:#B7CDD8; }
+  .spin { display:inline-block; width:20px; height:20px; border:3px solid #cfe3ec; border-top-color:#29A8E0; border-radius:50%; animation:r .8s linear infinite; }
+  @keyframes r { to { transform:rotate(360deg); } }
+</style>
+</head>
+<body>
+  <div class="box">
+    <div class="logo">Willjee</div>
+    <div class="sub">和穎國際 · 電子名片</div>
+    <div class="msg" id="msg"><span class="spin"></span></div>
+    <button id="shareBtn" style="display:none" onclick="doShare()">選擇好友、分享名片</button>
+  </div>
+
+<script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+<script>
+  // 套用後請把這裡換成你的 LIFF ID
+  var LIFF_ID = "PASTE_LIFF_ID_HERE";
+
+  var FLEX = {
+    type: "flex",
+    altText: "和穎國際 Willjee 電子名片 — 創辦人 李哲維",
+    contents: {"type":"carousel","contents":[{"type":"bubble","size":"mega","hero":{"type":"image","url":"https://i.postimg.cc/RZ3CSWvw/profile.jpg","size":"full","aspectRatio":"3:4","aspectMode":"cover"},"body":{"type":"box","layout":"vertical","backgroundColor":"#FFFFFF","paddingAll":"20px","contents":[{"type":"box","layout":"baseline","spacing":"sm","contents":[{"type":"text","text":"和穎國際","color":"#2BA9D6","size":"xs","flex":0},{"type":"text","text":"｜","color":"#BBE3EE","size":"xs","flex":0},{"type":"text","text":"WILLJEE","color":"#2BA9D6","size":"xs"}]},{"type":"text","text":"李哲維","color":"#1A2B33","size":"xxl","weight":"bold","margin":"sm"},{"type":"box","layout":"baseline","spacing":"sm","margin":"xs","contents":[{"type":"text","text":"創辦人","color":"#7A8A93","size":"sm","flex":0},{"type":"text","text":"｜","color":"#C9D4D9","size":"sm","flex":0},{"type":"text","text":"Founder","color":"#7A8A93","size":"sm"}]},{"type":"separator","margin":"xl","color":"#E3F2F7"},{"type":"box","layout":"vertical","margin":"xl","spacing":"sm","contents":[{"type":"box","layout":"baseline","spacing":"md","contents":[{"type":"text","text":"M","color":"#36C3C7","size":"sm","flex":1},{"type":"text","text":"+886-986-852-353","color":"#33444D","size":"sm","flex":9}]},{"type":"box","layout":"baseline","spacing":"md","contents":[{"type":"text","text":"E","color":"#36C3C7","size":"sm","flex":1},{"type":"text","text":"a7709393@gmail.com","color":"#33444D","size":"sm","flex":9}]},{"type":"box","layout":"baseline","spacing":"md","contents":[{"type":"text","text":"W","color":"#36C3C7","size":"sm","flex":1},{"type":"text","text":"www.willjee.com","color":"#33444D","size":"sm","flex":9}]},{"type":"box","layout":"baseline","spacing":"md","contents":[{"type":"text","text":"A","color":"#36C3C7","size":"sm","flex":1},{"type":"text","text":"台中市北屯區軍福十九路478號","color":"#33444D","size":"sm","flex":9,"wrap":true}]}]}]},"footer":{"type":"box","layout":"vertical","backgroundColor":"#FFFFFF","paddingAll":"20px","paddingTop":"0px","spacing":"sm","contents":[{"type":"button","style":"primary","color":"#29A8E0","height":"sm","action":{"type":"uri","label":"撥打電話","uri":"tel:+886986852353"}},{"type":"button","style":"primary","color":"#06C755","height":"sm","action":{"type":"uri","label":"加 LINE 好友","uri":"https://line.me/ti/p/~mr.bevis"}},{"type":"box","layout":"horizontal","spacing":"sm","contents":[{"type":"button","style":"secondary","height":"sm","action":{"type":"uri","label":"寄送信箱","uri":"mailto:a7709393@gmail.com"}},{"type":"button","style":"secondary","height":"sm","action":{"type":"uri","label":"官方網站","uri":"https://www.willjee.com"}},{"type":"button","style":"secondary","height":"sm","action":{"type":"uri","label":"地圖導航","uri":"https://www.google.com/maps/search/?api=1&query=%E5%8F%B0%E4%B8%AD%E5%B8%82%E5%8C%97%E5%B1%AF%E5%8D%80%E8%BB%8D%E7%A6%8F%E5%8D%81%E4%B9%9D%E8%B7%AF478%E8%99%9F"}}]}]}},{"type":"bubble","size":"mega","hero":{"type":"image","url":"https://i.postimg.cc/HkJWYrTF/dm.jpg","size":"full","aspectRatio":"3:4","aspectMode":"cover"},"body":{"type":"box","layout":"vertical","backgroundColor":"#FFFFFF","paddingAll":"20px","contents":[{"type":"box","layout":"baseline","spacing":"sm","contents":[{"type":"text","text":"精準選品","color":"#2BA9D6","size":"xs","flex":0},{"type":"text","text":"｜","color":"#BBE3EE","size":"xs","flex":0},{"type":"text","text":"佛山源頭工廠","color":"#2BA9D6","size":"xs","flex":0},{"type":"text","text":"｜","color":"#BBE3EE","size":"xs","flex":0},{"type":"text","text":"一站式方案","color":"#2BA9D6","size":"xs"}]},{"type":"text","text":"佛山家具供應鏈整合專家","color":"#1A2B33","size":"xl","weight":"bold","margin":"sm","wrap":true},{"type":"box","layout":"baseline","spacing":"sm","margin":"xs","contents":[{"type":"text","text":"Your Furniture Supply Chain Partner","color":"#7A8A93","size":"sm"}]},{"type":"separator","margin":"xl","color":"#E3F2F7"},{"type":"text","text":"15 年佛山產業經驗・500+ 家具通路合作","color":"#33444D","size":"sm","margin":"xl","wrap":true},{"type":"text","text":"從源頭選品到理想空間的實現，高品質・高效率・高價值。","color":"#7A8A93","size":"sm","margin":"sm","wrap":true}]},"footer":{"type":"box","layout":"vertical","backgroundColor":"#FFFFFF","paddingAll":"20px","paddingTop":"0px","spacing":"sm","contents":[{"type":"button","style":"primary","color":"#29A8E0","height":"sm","action":{"type":"uri","label":"瀏覽官方網站","uri":"https://www.willjee.com"}},{"type":"button","style":"secondary","height":"sm","action":{"type":"uri","label":"聯絡我們","uri":"tel:+886986852353"}}]}}]}
+  };
+
+  var msgEl = document.getElementById("msg");
+  var btn = document.getElementById("shareBtn");
+
+  function showButton(text) {
+    msgEl.textContent = text || "";
+    btn.style.display = "inline-block";
+  }
+
+  function doShare() {
+    if (!liff.isApiAvailable("shareTargetPicker")) {
+      msgEl.textContent = "此環境不支援分享，請在 LINE App 內開啟。";
+      return;
+    }
+    btn.disabled = true;
+    msgEl.innerHTML = '<span class="spin"></span>';
+    liff.shareTargetPicker([FLEX]).then(function(res){
+      btn.disabled = false;
+      if (res) { msgEl.textContent = "已分享，感謝您！"; btn.style.display="none"; }
+      else { showButton("已取消，可再試一次"); }
+    }).catch(function(err){
+      btn.disabled = false;
+      showButton("分享失敗，請再試一次");
+      console.error(err);
+    });
+  }
+
+  liff.init({ liffId: LIFF_ID }).then(function(){
+    if (!liff.isInClient()) {
+      msgEl.textContent = "請在 LINE App 內開啟此連結才能分享名片。";
+      return;
+    }
+    // 進入後直接跳出分享面板；若使用者關閉，再用按鈕重試
+    doShare();
+    showButton("");
+    msgEl.textContent = "請選擇要分享的好友";
+  }).catch(function(err){
+    msgEl.textContent = "初始化失敗：" + (err && err.message ? err.message : err);
+  });
+</script>
+</body>
+</html>
